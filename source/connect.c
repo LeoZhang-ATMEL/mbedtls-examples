@@ -160,14 +160,14 @@ int atca_connect(const char * endpoint, const char * port)
     /* Extract the device certificate and convert to mbedtls cert */
     if (0 != atca_mbedtls_cert_add(&cert, &g_cert_def_2_device))
     {
-        printf("Failed to parse cert from device\n");
+        printf("Failed to parse cert(device) from device\n");
         goto exit;
     }
 
     /* Extract the signer certificate, convert, then attach to the chain */
     if (0 != atca_mbedtls_cert_add(&cert, &g_cert_def_1_signer))
     {
-        printf("Failed to parse cert from device\n");
+        printf("Failed to parse cert(ca) from device\n");
         goto exit;
     }
 

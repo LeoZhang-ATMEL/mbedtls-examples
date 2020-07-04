@@ -48,6 +48,16 @@ uint8_t atca_io_protection_key[32] = {
     0x06, 0xfe, 0xec, 0x14, 0x5a, 0x0d, 0xb1, 0xe3
 };
 
+int atca_mbedtls_ecdh_slot_cb(void)
+{
+    return 0xFFFF;
+}
+
+int atca_mbedtls_ecdh_ioprot_cb(uint8_t secret[32])
+{
+    memcpy(secret, atca_io_protection_key, 32);
+    return 0;
+}
 /* Writes the certificates into a device*/
 int atca_provision(void)
 {

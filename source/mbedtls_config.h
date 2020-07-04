@@ -5,8 +5,8 @@
 
 /* Define additional features of the mbedtls library that are needed */
 
-#define MBEDTLS_ECDH_GEN_PUBLIC_ALT
-#define MBEDTLS_ECDH_COMPUTE_SHARED_ALT
+//#define MBEDTLS_ECDH_GEN_PUBLIC_ALT
+//#define MBEDTLS_ECDH_COMPUTE_SHARED_ALT
 #define MBEDTLS_ECDSA_SIGN_ALT
 
 #undef MBEDTLS_ECP_DP_SECP192R1_ENABLED
