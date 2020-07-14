@@ -21,6 +21,9 @@ add_subdirectory(cryptoauthlib/lib)
 add_executable(connect source/connect.c source/cert_chain.c)
 target_link_libraries(connect cryptoauth mbedtls)
 
+add_executable(tngconnect source/tngconnect.c source/tng_atca.c source/tngtls_cert_def_2_device.c)
+target_link_libraries(tngconnect cryptoauth mbedtls)
+
 add_executable(configure source/configure.c)
 target_link_libraries(configure cryptoauth mbedtls)
 
